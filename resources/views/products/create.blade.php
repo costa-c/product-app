@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-lg-12">
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -16,7 +16,16 @@
             </div>
             @endif
             <div class="card">
-                <div class="card-header">{{ __('Adicionar produto') }}</div>
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col col-lg-12"><b>{{ __('Adicionar Produto') }}</b></div>
+                        <div class="col col-lg-12">
+                            <a href="{{ route('products.index') }}" class="btn btn-success btn-sm float-end">
+                                Retornar</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card-body">
                     <form method="post" action="{{ route('products.store') }}" enctype="multipart/form-data">
                         @csrf

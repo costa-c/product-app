@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-lg-12">
             @if($message = Session::get('success'))
 
             <div class="alert alert-success">
@@ -15,8 +15,8 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col col-md-6"><b>Dados de Produtos</b></div>
-                        <div class="col col-md-6">
+                        <div class="col col-lg-12"><b>Dados de Produtos</b></div>
+                        <div class="col col-lg-12">
                             <a href="{{ route('products.create') }}" class="btn btn-success btn-sm float-end">
                                 Adicionar</a>
                         </div>
@@ -27,7 +27,7 @@
                         <tr>
                             <th>Imagem</th>
                             <th>Nome</th>
-                            <th>Ação</th>
+                            <th>Ações</th>
                         </tr>
                         @if(count($data) > 0)
                             @foreach($data as $row)
